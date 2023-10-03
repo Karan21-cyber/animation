@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#bannerText{
+  color: #fff;
+  animation-name: text_animation linear;
+  transition: 2s;
+}
+
+@keyframes text_animation{
+  from{
+    transform: translateY(-110%);
+  }
+  to{
+    transform: translateY(0%);
+   
+  }
+}
+
+
+* {
+  scroll-behavior: smooth;
+  cursor: none;
+}
