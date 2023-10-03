@@ -31,7 +31,7 @@ export const MouseEffect: FC<IProps> = ({ cursorVariant }) => {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
       backgroundColor: "#000",
-    //   mixBlendMode: "difference",
+      //   mixBlendMode: "difference",
     },
     text: {
       height: 50,
