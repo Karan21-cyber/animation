@@ -30,12 +30,15 @@ export const MouseEffect: FC<IProps> = ({ cursorVariant }) => {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-      backgroundColor: "#000",
-      //   mixBlendMode: "difference",
+      backgroundColor: "#00000",
+      // mixBlendMode: "difference",
     },
     text: {
       height: 50,
-      width: 50,
+      width: 50, 
+      fontSize: 12,
+      textCentered: true,
+      color: "#00000",
       x: mousePosition.x - 25,
       y: mousePosition.y - 25,
       backgroundColor: "#ffff",
