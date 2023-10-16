@@ -92,7 +92,7 @@ export const TextAnimation = () => {
       </motion.div>
       <motion.div
         transition={{ duration: 1.5, delay: 0.5 }}
-        initial={{ x: "100%" }}
+        initial={{ x: "-100%" }}
         animate={{ x: "0%" }}
         className=""
       >

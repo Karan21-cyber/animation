@@ -9,7 +9,7 @@ export default function Home() {
       <TextAnimation />
       {/* </div> */}
       <ImageSection />
-      {/* <KiteAnimation /> */}
+      <KiteAnimation />
     </div>
   );
 }

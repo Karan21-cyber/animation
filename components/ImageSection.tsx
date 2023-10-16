@@ -3,47 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// .header {
-//     width: 100%;
-//     height:90vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-size: 32px;
-//     /* padding: 0 10vw; */
-//   }
-
-//   .image {
-//     border: 1px solid;
-//     line-height: 0;
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-//   .tagline {
-//     position: absolute;
-//     /* padding-bottom: 16px; */
-//     color: white;
-//     font-size: 48px;
-//     opacity: 0;
-//   }
-//   .image > div {
-//     width: 100%;
-//   }
-//   .image > #grow {
-//     width: 100%;
-//     object-fit: contain;
-//   }
-
-//   #grow-tagline {
-//     transform: translateY(200px);
-//   }
-
-//   #grow {
-//     transform: scale(0.00);
-//   }
+import KiteAnimation from "./KiteAnimation";
 
 export default function ImageSection() {
   const growRef = useRef(null);
@@ -72,30 +32,34 @@ export default function ImageSection() {
       taglineRef.current,
       {
         duration: 1,
-        // delay: -0.7,
+        delay: 0.7,
         opacity: 1,
         y: 0,
       },
-      "<" // overlap with the previous tween
+      "<"
     );
-  }, []); // Empty dependency array ensures this effect runs once after initial render
+  }, []);
 
   return (
     <>
-      <div className="header ">
-        <div className="image">
-          <div>
+      <div className="header w-full h-[90vh] flex justify-center items-center text-3xl">
+        <div className="image relative flex justify-center items-center">
+          <div className="w-full ">
             <img
               ref={growRef}
               id="grow"
-              src="https://source.unsplash.com/random/1920x1080"
+              src="/background.jpg"
               alt="Random"
-              className=""
+              className="w-full  object-cover transform scale-0"
             />
           </div>
-          {/* <h1 ref={taglineRef} className="tagline">
+          {/* <h1
+            ref={taglineRef}
+            className="tagline absolute opacity-0 text-black top-1/2 transform translate-y-[500px]"
+          >
             At Vero Eos
           </h1> */}
+          <KiteAnimation />
         </div>
       </div>
     </>
