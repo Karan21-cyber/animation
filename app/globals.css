@@ -1,27 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* image inlarge scroll */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: "Goblin One", cursive;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  height:90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  /* padding: 0 10vw; */
+}
+
+.image {
+  border: 1px solid;
+  line-height: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tagline {
+  position: absolute;
+  color: white;
+  font-size: 48px;
+  opacity: 0;
+}
+.image > div {
+  width: 100%;
+}
+.image > #grow {
+  width: 100%;
+  object-fit: contain;
+}
+
+#grow-tagline {
+  transform: translateY(200px);
+}
+
+#grow {
+  transform: scale(0.00);
 }
