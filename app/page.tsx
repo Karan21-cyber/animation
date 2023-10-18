@@ -4,12 +4,12 @@ import { TextAnimation } from "@/components/TextAnimation";
 
 export default function Home() {
   return (
-    <div className="h-[150vh]">
+    <div className=" ">
       {/* <div className="h-[50vh] "> */}
-      <TextAnimation />
+      {/* <TextAnimation /> */}
       {/* </div> */}
       <ImageSection />
-      <KiteAnimation />
+      {/* <KiteAnimation /> */}
     </div>
   );
 }

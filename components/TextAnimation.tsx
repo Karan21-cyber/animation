@@ -81,7 +81,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export const TextAnimation = () => {
   return (
-    <section className="velocity-wrapper relative w-full py-[5%]   ">
+    <section className="velocity-wrapper py-[5%] overflow-hidden">
       <motion.div
         transition={{ duration: 1.5, delay: 0.5 }}
         initial={{ x: "100%" }}
