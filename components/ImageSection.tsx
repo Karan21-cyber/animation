@@ -10,7 +10,6 @@ import { Stick } from "next/font/google";
 export default function ImageSection() {
   const growRef = useRef(null);
   const taglineRef = useRef(null);
-  const tagline2Ref = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -22,7 +21,6 @@ export default function ImageSection() {
         pin: true,
         start: "top center",
         end: "+=400px",
-        // endTrigger: growRef.current,
         ease: "power2.inOut",
         // markers: true,
       },
@@ -48,21 +46,9 @@ export default function ImageSection() {
         delay: 1,
         opacity: 1,
         y: 0,
-        left: "50%",
-        transform: "translateX(-50%)",
-      },
-      "<"
-    );
-
-    growTl.to(
-      tagline2Ref.current,
-      {
-        duration: 1,
-        delay: 1.5,
-        opacity: 1,
-        y: 0,
-        right: "50%",
-        transform: "translateX(-50%)",
+        markers: true,
+        // left: "50%",
+        // transform: "translateX(-50%)",
       },
       "<"
     );
@@ -85,22 +71,29 @@ export default function ImageSection() {
             />
           </div>
           {/* <div className="flex gap-2 items-center "> */}
-            <h1
+          {/* <h1
               ref={taglineRef}
               // className="tagline absolute opacity-0 text-white top-1/2 transform translate-y-[500px]"
               className="tagline absolute opacity-0 text-white top-1/2 left-[-10%] transform"
             >
               this is the tagline
-            </h1>
-            <h1
+            </h1> */}
+          {/* <h1
               ref={taglineRef}
               // className="tagline absolute opacity-0 text-white top-1/2 transform translate-y-[500px]"
               className="tagline absolute opacity-0 text-white top-1/2 right-[-10%] transform"
             >
               this is the tagline2
-            </h1>
+            </h1> */}
           {/* </div> */}
           {/* <KiteAnimation /> */}
+          <div
+            ref={taglineRef}
+            className="absolute left-[50%] transform top-1/2 translate-x-[-50%] flex gap-2 items-center opacity-0 text-white"
+          >
+            <h1>Happy</h1>
+            <h1>Dashain</h1>
+          </div>
         </div>
       </div>
     </>
