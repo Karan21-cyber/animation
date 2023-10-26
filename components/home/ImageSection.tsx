@@ -51,12 +51,12 @@ export const ImageSection: FC<ImageProps> = ({ src }) => {
       mixBlendMode: "difference",
     },
     image: {
-      height: 80,
-      width: 80,
+      // height: 80,
+      // width: 80,
       x: mousePosition.x - 40,
       y: mousePosition.y - 40,
-      backgroundColor: "#9eabde",
-      mixBlendMode: "difference",
+      backgroundColor: "white",
+      // mixBlendMode: "difference",
     },
   };
 
@@ -102,10 +102,15 @@ export const ImageSection: FC<ImageProps> = ({ src }) => {
       </motion.h2>
 
       <motion.div
-        className="cursor h-8 w-8 rounded-full fixed top-0 left-0 pointer-events-none"
+        className="cursor h-[100px] w-[100px]  rounded-full shadow-2xl fixed top-0 left-0 pointer-events-none"
         variants={variants}
         animate={cursorVariant}
-      />
+      >
+        <h1 className="w-full h-full p-4 text-xl text-center flex justify-center items-center flex-wrap ">
+          See Project
+        </h1>
+        
+      </motion.div>
     </section>
   );
 };
